@@ -1,0 +1,216 @@
+@use '../utils/mixin.scss';
+@use '../components/general';
+@use '../utils/colors.scss';
+@use '../components/components';
+@use '../utils/typo_and_var.scss';
+
+// ***********************Main ************************
+
+.main{
+    @include mixin.flex-center();
+    padding: auto;
+    width: auto;
+    @media screen and (min-width:typo_and_var.$ssl) {
+     
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    }
+  }
+  
+    // ****************** Fonctionnement ******************
+  
+  .main__fonctionnement{
+    @include mixin.flex-center();
+    align-items: flex-start;
+    // justify-content: flex-start;
+    padding: 4rem 2rem;
+    
+    width:100%;
+    @media screen and (min-width:typo_and_var.$ssl) {
+      width: 100%;
+      padding: 3rem 12rem 0 12rem ;
+      height: auto;
+    }
+  
+    & h1{
+      @include mixin.h1style();
+      margin-bottom:2rem;
+      padding: 0;
+      @media screen and (min-width:typo_and_var.$ssl) {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  
+    &__cards{
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: -1rem;
+      width: 100%;
+  
+      @media screen and (min-width:typo_and_var.$ssl) {
+        justify-content: flex-start;
+        height: 15rem;
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        
+      }
+  
+      &-card{
+        background: colors.$light-grey;
+        width: 90%;
+        height: 8rem;
+        margin-bottom: 2.5rem;
+        @media screen and (min-width:typo_and_var.$ssl) {
+          width: 90%;
+          margin-right: 5rem;
+          justify-content: flex-start;
+          
+        }
+        & p{        
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          left: -10px;
+          background: colors.$purple;
+          color: colors.$white;
+          border-radius: 50%;
+          width: 2.8rem;
+          height: 2.8rem;
+        }
+      & i{
+        font-size: 2.5rem;
+        color: colors.$dark-grey;
+        margin-left: 4rem;
+        margin-right: 3rem;
+      }
+  
+      & .fa-store {
+        color: colors.$purple;
+      }
+  
+      & h3 {
+        width: 70%;
+        font-size: 1.5rem;
+      }
+      }
+    }
+  }
+  
+    // ****************** Restaurants ******************
+  
+    .main__restaurants{
+      
+      background: colors.$light-grey;
+      width: 100%;
+      
+      @media screen and (min-width:typo_and_var.$ssl) {
+        // max-width: 70%;
+        padding: 5rem 12rem;
+  
+      } 
+  
+      & h1{
+        @include mixin.h1style();
+        width: 90%;
+        margin: 5rem 0 2rem 2rem;
+        // margin-left: 2.5rem;
+        // margin-bottom: 2.5rem;
+        @media screen and (min-width:typo_and_var.$ssl) {
+          
+          margin-left: 0;
+        } 
+      }
+  
+      &__cards{
+        @include mixin.flex-center();
+        
+        
+  
+        @media screen and (min-width:typo_and_var.$ssl) {
+          flex-wrap: wrap;
+          flex-direction: row;
+          // max-width: 70%;
+          // margin: 0;
+          justify-content: space-between;
+          // padding: 0 25rem;
+        }
+        & a{
+          text-decoration: none;
+          color: colors.$black;
+        } 
+  
+        &-card{
+          cursor: pointer;
+          flex-direction: column;
+          width: 90%;
+          
+          // max-width: 40rem;
+          margin-bottom: 2.5rem;
+          @media screen and (min-width:typo_and_var.$ssl) {
+            width: 45%;
+          } 
+  
+          &--nouveau{
+            position: absolute;
+            @include mixin.flex-center();
+            top: 8px;
+            right: 10px;
+            width: 80px;
+            height: 29px;
+            background: colors.$light-green;
+            color: colors.$green;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+  
+           
+          }
+          & img{
+            height: 20rem;
+            width: 100%;
+            object-fit:cover;
+            border-radius: 15px 15px 0 0 ;
+            @media screen and (min-width:typo_and_var.$ssl) {
+              height: 25rem;
+            } 
+          }
+          &-description{
+            @include mixin.flex-center();
+            flex-direction: row;
+            width: 100%;
+            height: 8rem;
+            align-items: center;
+  
+            &-text{
+              width: 80%;
+              
+  
+              
+              & h2{
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 21px;
+                
+              }
+            }
+  
+            & i {
+              font-size: 2.5rem;
+              &:active{
+                color: colors.$purple;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    

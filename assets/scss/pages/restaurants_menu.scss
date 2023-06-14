@@ -1,0 +1,258 @@
+@use '../components/general';
+@use '../utils/colors.scss';
+@use '../components/components';
+@use '../utils/typo_and_var.scss' as t;
+@use '../utils/mixin.scss';
+
+
+
+
+// ******************* header ********************
+.menus__header{
+
+    margin-bottom: -5rem;
+    order: -1;
+
+    &__logo{
+        @include mixin.flex-center();
+        flex-direction: row;
+        height: 8rem;
+        padding: 2rem;
+
+        & button{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    
+        & i {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: colors.$black;
+        }
+    
+        & img {
+            height: 3rem;
+            
+        }
+    }
+
+    &-img{
+        height: 27rem;
+        object-fit: cover;
+        @media screen and (min-width:t.$ssl) {
+            height: 40rem;
+        }
+    }
+}
+
+
+
+// ******************* main ********************
+
+.menus__main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 2rem;
+    border-radius: 15% ;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+    background: colors.$light-grey;
+    @media screen and (min-width:t.$ssl) {
+        max-width: 150rem;
+        width: 70%;
+        padding:2rem 15rem ;
+        margin: 0 auto;
+    }
+
+    &-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        @media screen and (min-width:t.$ssl) {        
+            justify-content: center;  
+        }
+
+        & h1{
+            font-family: t.$ffprimary_menus;
+            font-size: 2.5rem;
+            font-weight: 500;
+            
+            @media screen and (min-width:t.$ssl) {        
+                margin-right: 2rem;
+                
+            }
+        }
+    }
+    
+    &__container{
+
+        &-sub{
+            @media screen and (min-width:t.$ssl) {
+                margin-bottom: 3rem;
+        
+            }
+
+            &-subtitle{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1rem;
+
+                @media screen and (min-width:t.$ssl) {
+                    margin-bottom: 3rem;
+                    font-size: 1.2rem;
+                    font-weight: 100;
+                }
+
+                &-line{
+                    margin-top: 0.5rem;
+                    content: "";
+                    height: 3px;
+                    width: 40px;
+                    background: colors.$light-green;
+                }
+            }
+
+            &-cards{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                width: 100%;
+                &-card{
+                    background-color: white;
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+        }
+        
+
+    }
+
+    // ******************* assiette *************************
+
+    .assiette{
+        cursor: pointer;
+        width: 100%;
+        
+        display: flex;
+        justify-content:space-between; 
+        overflow: hidden;
+          
+            &__texte{
+                display: flex;
+                
+                align-items: flex-start;
+                padding-left:1.5rem;
+                width: 100%;
+                // overflow:hidden ;
+                min-width: 60%;
+                display: flex;flex-direction: column;
+                justify-content: center;
+                &__menu{
+                    display: block;
+                    width: 100%;
+                    white-space: nowrap;
+
+                    // permet les trois points quand hidden
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    
+                }
+                & h3{
+                    font-size: 1.8rem;
+                    margin-bottom: 0.3rem;
+                }
+                & p{
+                    font-size: 1.5rem;
+                }
+        }
+        
+        &__prix{
+            height: 32px;
+            width: 45px;
+            padding-left: 0px;
+            margin: 36px 3px 0rem 10px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.4s linear;
+          }
+      
+        &--valide{
+          width: 0px;
+          min-width: 0px;
+          height: 68px;
+          display:flex;
+          flex: 0;
+          justify-content: center;
+          position:relative;
+          left: 1px; /* évite un escalier de l'animation */
+          background-color: lighten(colors.$light-green, 10%);
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+        //   transform-origin: 100% 50%;
+          transition: all 0.4s linear;
+          
+          &--icone{
+            position: absolute;
+            left: 20px;
+            margin: 24px 0 24px 0;
+            font-size: 1.5rem;
+            color: colors.$white;
+          }
+        }
+        // &:hover > .assiette--valide{
+        //     min-width: 60px;
+        // }
+        
+    }
+      
+      
+      .selection{
+        display: none;
+        &:hover + .assiette .assiette--valide{
+            min-width: 60px;
+            background-color: #28a183;
+             
+            
+        }
+        &:checked + .assiette .assiette--valide{
+          min-width: 60px;
+          background-color: colors.$light-green;
+          transition: all 0.4s linear;
+          
+        }
+        }
+
+      
+
+    //   ************************ button **********************
+
+    &-button{
+        @media screen and (min-width:t.$ssl) {
+            
+            margin: 2rem 0 3rem 0;
+    
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 4rem 0;
+    }
+}
+
+
+
+
+
+// ******************* footer ********************
+
+.footer{
+    position: relative;
+    
+}
