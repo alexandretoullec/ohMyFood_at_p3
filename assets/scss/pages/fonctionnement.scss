@@ -31,7 +31,7 @@
     width:100%;
     @media screen and (min-width:typo_and_var.$ssl) {
       // width: 100%;
-      padding: 3rem 12rem 0 12rem ;
+      padding: 3rem 20rem 0 20rem ;
       height: auto;
     }
   
@@ -71,7 +71,8 @@
         margin-bottom: 2.5rem;
         @media screen and (min-width:typo_and_var.$ssl) {
           width: 100%;
-          margin-right: 5rem;
+          margin-right: 4rem;
+          margin-left: 1rem;
           justify-content: flex-start;
         }
 
@@ -117,9 +118,11 @@
       background: colors.$light-grey;
       width: 100%;
       
+      
       @media screen and (min-width:typo_and_var.$ssl) {
         // max-width: 70%;
-        padding: 5rem 12rem;
+        padding: 5rem 20rem;
+        
   
       } 
   

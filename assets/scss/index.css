@@ -24,10 +24,8 @@ img {
   width: 100%;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
+.main-container {
+  margin: auto;
 }
 
 .button {
@@ -633,7 +631,7 @@ img {
 }
 @media screen and (min-width: 1024px) {
   .main__fonctionnement {
-    padding: 3rem 12rem 0 12rem;
+    padding: 3rem 20rem 0 20rem;
     height: auto;
   }
 }
@@ -677,7 +675,8 @@ img {
 @media screen and (min-width: 1024px) {
   .main__fonctionnement__cards-card {
     width: 100%;
-    margin-right: 5rem;
+    margin-right: 4rem;
+    margin-left: 1rem;
     justify-content: flex-start;
   }
 }
@@ -719,7 +718,7 @@ img {
 }
 @media screen and (min-width: 1024px) {
   .main__restaurants {
-    padding: 5rem 12rem;
+    padding: 5rem 20rem;
   }
 }
 .main__restaurants h1 {
