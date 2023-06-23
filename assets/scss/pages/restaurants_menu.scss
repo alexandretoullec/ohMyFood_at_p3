@@ -10,7 +10,7 @@
 // ******************* header ********************
 .menus__header{
 
-    margin-bottom: -5rem;
+    margin-bottom: -6rem;
     order: -1;
 
     &__logo{
@@ -51,11 +51,12 @@
 // ******************* main ********************
 
 .menus__main{
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 0 2rem;
-    border-radius: 15% ;
+    border-radius: 15px ;
     height: 100%;
     border-radius: 20px;
     position: relative;
@@ -65,6 +66,7 @@
         width: 70%;
         padding:2rem 15rem ;
         margin: 0 auto;
+        border-radius: 30px 30px 0 0;
     }
 
     &-title{
@@ -72,13 +74,14 @@
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
+        margin-top: 1.5rem;
         @media screen and (min-width:t.$ssl) {        
             justify-content: center;  
         }
 
         & h1{
             font-family: t.$ffprimary_menus;
-            font-size: 2.5rem;
+            font-size: 28px;
             font-weight: 500;
             
             @media screen and (min-width:t.$ssl) {        
@@ -91,6 +94,7 @@
     &__container{
 
         &-sub{
+
             @media screen and (min-width:t.$ssl) {
                 margin-bottom: 3rem;
         
@@ -99,7 +103,8 @@
             &-subtitle{
                 display: flex;
                 flex-direction: column;
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
+                margin-top: 1rem;
 
                 @media screen and (min-width:t.$ssl) {
                     margin-bottom: 3rem;
@@ -113,6 +118,10 @@
                     height: 3px;
                     width: 40px;
                     background: colors.$light-green;
+                }
+                & h2 {
+                    font-size: 16px;
+                    font-weight: 300;
                 }
             }
 
@@ -256,5 +265,8 @@
 
 .footer{
     position: relative;
-    
+    &__logo{
+        display: flex;
+        justify-content: flex-start;
+    }
 }

@@ -143,15 +143,14 @@ img {
   flex-direction: column;
   background: #F7F7F7;
   justify-content: space-around;
-  padding-top: 3rem;
-  padding-bottom: 6rem;
+  padding-top: 5rem;
+  padding-bottom: 8rem;
 }
 .header__explanation-text {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 17rem;
   text-align: center;
 }
 .header__explanation-text h1 {
@@ -172,11 +171,13 @@ img {
   font-weight: 300;
   font-size: 18px;
   line-height: 21px;
+  width: 80%;
+  margin-bottom: 4rem;
 }
 @media screen and (min-width: 1024px) {
   .header__explanation-text p {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
   }
 }
 .header__explanation-button a {
@@ -184,7 +185,6 @@ img {
   font-size: 18px;
   font-weight: 500;
 }
-
 .footer {
   background: #353535;
   height: 20rem;
@@ -394,7 +394,7 @@ img {
 }
 
 .menus__header {
-  margin-bottom: -5rem;
+  margin-bottom: -6rem;
   order: -1;
 }
 .menus__header__logo {
@@ -434,7 +434,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   padding: 0 2rem;
-  border-radius: 15%;
+  border-radius: 15px;
   height: 100%;
   border-radius: 20px;
   position: relative;
@@ -446,6 +446,7 @@ img {
     width: 70%;
     padding: 2rem 15rem;
     margin: 0 auto;
+    border-radius: 30px 30px 0 0;
   }
 }
 .menus__main-title {
@@ -453,6 +454,7 @@ img {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  margin-top: 1.5rem;
 }
 @media screen and (min-width: 1024px) {
   .menus__main-title {
@@ -461,7 +463,7 @@ img {
 }
 .menus__main-title h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 2.5rem;
+  font-size: 28px;
   font-weight: 500;
 }
 @media screen and (min-width: 1024px) {
@@ -477,7 +479,8 @@ img {
 .menus__main__container-sub-subtitle {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 @media screen and (min-width: 1024px) {
   .menus__main__container-sub-subtitle {
@@ -492,6 +495,10 @@ img {
   height: 3px;
   width: 40px;
   background: #99E2D0;
+}
+.menus__main__container-sub-subtitle h2 {
+  font-size: 16px;
+  font-weight: 300;
 }
 .menus__main__container-sub-cards {
   display: flex;
@@ -594,6 +601,10 @@ img {
 .footer {
   position: relative;
 }
+.footer__logo {
+  display: flex;
+  justify-content: flex-start;
+}
 
 .main {
   display: flex;
@@ -622,7 +633,6 @@ img {
 }
 @media screen and (min-width: 1024px) {
   .main__fonctionnement {
-    width: 100%;
     padding: 3rem 12rem 0 12rem;
     height: auto;
   }
@@ -646,7 +656,6 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: -1rem;
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
@@ -660,13 +669,14 @@ img {
 }
 .main__fonctionnement__cards-card {
   background: #F7F7F7;
-  width: 90%;
+  width: 100%;
   height: 8rem;
+  margin-left: -1rem;
   margin-bottom: 2.5rem;
 }
 @media screen and (min-width: 1024px) {
   .main__fonctionnement__cards-card {
-    width: 90%;
+    width: 100%;
     margin-right: 5rem;
     justify-content: flex-start;
   }
@@ -686,15 +696,21 @@ img {
 .main__fonctionnement__cards-card i {
   font-size: 2.5rem;
   color: #7E7E7E;
-  margin-left: 4rem;
-  margin-right: 3rem;
+  margin-left: 2rem;
+  margin-right: 0rem;
+}
+@media screen and (min-width: 1024px) {
+  .main__fonctionnement__cards-card i {
+    margin-left: 4rem;
+    margin-right: 3rem;
+  }
 }
 .main__fonctionnement__cards-card .fa-store {
   color: #9356DC;
 }
 .main__fonctionnement__cards-card h3 {
-  width: 70%;
-  font-size: 1.5rem;
+  width: 80%;
+  font-size: 16px;
 }
 
 .main__restaurants {

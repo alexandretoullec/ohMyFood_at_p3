@@ -9,7 +9,7 @@
 
 .main{
     @include mixin.flex-center();
-    // padding: auto;
+    
     width: auto;
     @media screen and (min-width:typo_and_var.$ssl) {
      
@@ -30,7 +30,7 @@
     
     width:100%;
     @media screen and (min-width:typo_and_var.$ssl) {
-      width: 100%;
+      // width: 100%;
       padding: 3rem 12rem 0 12rem ;
       height: auto;
     }
@@ -51,7 +51,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-left: -1rem;
+      
       width: 100%;
   
       @media screen and (min-width:typo_and_var.$ssl) {
@@ -65,15 +65,16 @@
   
       &-card{
         background: colors.$light-grey;
-        width: 90%;
+        width: 100%;
         height: 8rem;
+        margin-left: -1rem;
         margin-bottom: 2.5rem;
         @media screen and (min-width:typo_and_var.$ssl) {
-          width: 90%;
+          width: 100%;
           margin-right: 5rem;
           justify-content: flex-start;
-          
         }
+
         & p{        
           position: absolute;
           display: flex;
@@ -89,8 +90,12 @@
       & i{
         font-size: 2.5rem;
         color: colors.$dark-grey;
-        margin-left: 4rem;
-        margin-right: 3rem;
+        margin-left: 2rem;
+        margin-right: 0rem;
+        @media screen and (min-width:typo_and_var.$ssl) {
+          margin-left: 4rem;
+          margin-right: 3rem;
+        }
       }
   
       & .fa-store {
@@ -98,8 +103,8 @@
       }
   
       & h3 {
-        width: 70%;
-        font-size: 1.5rem;
+        width: 80%;
+        font-size: 16px;
       }
       }
     }
