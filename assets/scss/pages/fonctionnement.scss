@@ -8,7 +8,7 @@
 
 .main{
     @include mixin.flex-center();
-    padding: auto;
+    // padding: auto;
     width: auto;
     @media screen and (min-width:typo_and_var.$ssl) {
      
@@ -211,9 +211,9 @@
   
             & i {
               font-size: 2.5rem;
-              &:active{
-                color: colors.$linear-gradient;
-              }
+              // &:active{
+              //   color: colors.$linear-gradient;
+              // }
             }
           }
         }
