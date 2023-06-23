@@ -528,12 +528,13 @@ img {
   white-space: nowrap;
   overflow: hidden;
 }
-.menus__main .assiette__texte h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.3rem;
+.menus__main .assiette__texte__menu-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
 }
-.menus__main .assiette__texte p {
-  font-size: 1.5rem;
+.menus__main .assiette__texte__menu-desc {
+  font-size: 15px;
 }
 .menus__main .assiette__prix {
   height: 32px;
