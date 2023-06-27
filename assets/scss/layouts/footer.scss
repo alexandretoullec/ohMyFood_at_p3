@@ -11,17 +11,14 @@
     background: #353535;
     height: 20rem;
     padding: 2rem;
-
     @media screen and (min-width:typo_and_var.$ssl) {
       display: flex;
       flex-direction: row-reverse;
-      
       align-items: center;
       justify-content: flex-start;
       height: 10rem;
       padding-top: 5rem;
     } 
-
     &__logo{
       display: flex;
       justify-content: center;
@@ -32,28 +29,22 @@
         width: 15%;
         margin-left: 2rem;
       } 
-      
       & img{
         filter: invert(1) ;
         width: 11rem;
       }
     }
-
     &__links{
       @include mixin.flex-center();
       align-items: flex-start;
       justify-content: space-between;
       width: 100%;
       padding: 2.5rem 0;
-      
-
       @media screen and (min-width:typo_and_var.$ssl) {
         display: flex;
         flex-direction: row;
         width: auto;
-        
       } 
-
       &-link{
         @include mixin.flex-center();
         flex-direction: row;
@@ -82,10 +73,7 @@
             margin-right: 1rem;
             white-space: nowrap;
           } 
-          
-          
         }
       }
     }
-
   }

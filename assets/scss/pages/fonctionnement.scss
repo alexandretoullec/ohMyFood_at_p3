@@ -9,14 +9,17 @@
 
 .main{
     @include mixin.flex-center();
-    
     width: auto;
     @media screen and (min-width:typo_and_var.$ssl) {
-     
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
+    }
+    @media screen and (min-width:typo_and_var.$sst) {
+      padding: 0;
+      margin: 0;
+      height: auto;
     }
   }
   
@@ -27,11 +30,14 @@
     align-items: flex-start;
     padding: 4rem 2rem;
     width:100%;
+    
+    
     @media screen and (min-width:typo_and_var.$ssl) {
+      min-width: 70rem;
       padding: 3rem 20rem 0 20rem ;
       height: auto;
     }
-  
+    
     & h2{
       @include mixin.h1style();
       margin-bottom:2rem;
@@ -59,12 +65,13 @@
   
       &-card{
         background: colors.$light-grey;
-        width: 100%;
+        width: 95%;
         height: 8rem;
-        margin-left: -1rem;
+        margin-left: -1.5rem;
         margin-bottom: 2.5rem;
         @media screen and (min-width:typo_and_var.$ssl) {
           width: 100%;
+          min-width: 25rem;
           margin-right: 4rem;
           margin-left: 1rem;
           justify-content: flex-start;
@@ -84,8 +91,8 @@
         & i{
           font-size: 2.5rem;
           color: colors.$dark-grey;
-          margin-left: 2rem;
-          margin-right: 0rem;
+          margin-left: 3rem;
+          margin-right: 2rem;
           @media screen and (min-width:typo_and_var.$ssl) {
             margin-left: 4rem;
             margin-right: 3rem;

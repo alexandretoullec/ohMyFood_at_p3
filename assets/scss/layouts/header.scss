@@ -29,11 +29,9 @@
     flex-direction: row;
     background: colors.$grey;
     height: 6rem;
-  
     & i{
       font-size: 2rem;
     }
-  
     & input{
       background: transparent;
       border: none;
@@ -51,26 +49,23 @@
     }
   }
   
-  
   .header__explanation{
-    
     @include mixin.flex-center();
-    
     background: colors.$light-grey;
     justify-content: space-around;
     padding-top: 5rem;
     padding-bottom: 8rem;
-    // height: 30rem;
     &-text{
       @include mixin.flex-center();
-      // height:20rem;
       text-align: center;
       & h1{
         @include mixin.h1style();
-        width: 60%;
+        font-size: typo_and_var.$fsh2Fonc;
+        width: 80%;
+        line-height: 30px;
         margin-bottom: 2rem;
         @media screen and (min-width:typo_and_var.$ssl) {
-          font-size: 5rem;;
+          font-size: 5rem;
           width: 100%;
           margin-bottom: 5rem;
         }
@@ -80,11 +75,10 @@
         font-size: 18px;
         line-height: 21px;
         width: 80%;
-        margin-bottom: 4rem;
+        margin-bottom: 5rem;
         @media screen and (min-width:typo_and_var.$ssl) {
           font-size: 2.5rem;;
           margin-bottom: 5rem;
-          // width: 90%;
         }
       }
     }
@@ -92,10 +86,5 @@
       text-decoration: none;
       font-size: 18px;
       font-weight: 500;
-      @media screen and (min-width:typo_and_var.$ssl) {
-        
-        // margin-bottom: 2rem;
-        
       }
-    }
   }

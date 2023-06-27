@@ -9,34 +9,27 @@
 
 // ******************* header ********************
 .menus__header{
-
     margin-bottom: -6rem;
     order: -1;
-
     &__logo{
         @include mixin.flex-center();
         flex-direction: row;
         height: 8rem;
         padding: 2rem;
-
         & button{
             background-color: transparent;
             border: none;
             cursor: pointer;
         }
-    
         & i {
             font-size: t.$fsh3;
             font-weight: 700;
             color: colors.$black;
         }
-    
         & img {
             height: 3rem;
-            
         }
     }
-
     &-img{
         height: 27rem;
         object-fit: cover;
@@ -51,7 +44,6 @@
 // ******************* main ********************
 
 .menus__main{
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -94,10 +86,8 @@
     &__container{
 
         &-sub{
-
             @media screen and (min-width:t.$ssl) {
                 margin-bottom: 3rem;
-        
             }
 
             &-subtitle{
@@ -131,14 +121,12 @@
                 justify-content: flex-start;
                 width: 100%;
                 &-card{
-                    background-color: white;
+                    background-color: colors.$light-white;
                     margin-bottom: 1.5rem;
                 }
             }
 
         }
-        
-
     }
 
     // ******************* assiette *************************
@@ -153,43 +141,30 @@
           
             &__texte{
                 display: flex;
-                
                 align-items: flex-start;
                 padding-left:1.5rem;
-                width: 100%;
-                // overflow:hidden ;
+                overflow:hidden ;
                 min-width: 60%;
-                
+                flex: 1;
                 flex-direction: column;
                 justify-content: center;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
                 &__menu{
-                    // display: block;
-                    // width: 100%;
-                    
-
-                    // permet les trois points quand hidden
-                    // white-space: nowrap;
-                    // overflow: hidden;
-                    // text-overflow: ellipsis;
-                   
                     &-title{
-                        
+                        width: 100%;
                         font-size: t.$fsh3restau;
                         font-weight: 500;
                         margin-bottom: 0.4rem;
+                        // allows ellispses when reduces do not forget width
                         white-space: nowrap;
-                        overflow: hidden;
                         text-overflow: ellipsis;
+                        overflow: hidden;
                     }
                     &-desc{
-                        
+                        width: 100%;
                         font-size: t.$fsprestau;
                         white-space: nowrap;
-                        overflow: hidden;
                         text-overflow: ellipsis;
+                        overflow: hidden;
                     }
                 }
         }
@@ -219,7 +194,6 @@
           background-color: lighten(colors.$light-green, 10%);
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
-        //   transform-origin: 100% 50%;
           transition: all 0.4s linear;
           
           &--icone{
@@ -230,27 +204,20 @@
             color: colors.$white;
           }
         }
-        // &:hover > .assiette--valide{
-        //     min-width: 60px;
-        // }
-        
     }
-      
-      
+          
       .selection{
         display: none;
-        &:hover + .assiette .assiette--valide{
+            &:hover + .assiette .assiette--valide{
+                min-width: 60px;
+                background-color: #28a183;     
+            }
+
+            &:checked + .assiette .assiette--valide{
             min-width: 60px;
-            background-color: #28a183;
-             
-            
-        }
-        &:checked + .assiette .assiette--valide{
-          min-width: 60px;
-          background-color: colors.$light-green;
-          transition: all 0.4s linear;
-          
-        }
+            background-color: colors.$light-green;
+            transition: all 0.4s linear;
+            }
         }
 
       
@@ -259,9 +226,7 @@
 
     &-button{
         @media screen and (min-width:t.$ssl) {
-            
             margin: 2rem 0 3rem 0;
-    
         }
         display: flex;
         justify-content: center;
@@ -269,10 +234,6 @@
         margin: 4rem 0;
     }
 }
-
-
-
-
 
 // ******************* footer ********************
 
