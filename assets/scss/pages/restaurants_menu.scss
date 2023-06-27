@@ -26,7 +26,7 @@
         }
     
         & i {
-            font-size: 2.5rem;
+            font-size: t.$fsh3;
             font-weight: 700;
             color: colors.$black;
         }
@@ -81,7 +81,7 @@
 
         & h1{
             font-family: t.$ffprimary_menus;
-            font-size: 28px;
+            font-size: t.$fsh1restau;
             font-weight: 500;
             
             @media screen and (min-width:t.$ssl) {        
@@ -108,7 +108,7 @@
 
                 @media screen and (min-width:t.$ssl) {
                     margin-bottom: 3rem;
-                    font-size: 1.2rem;
+                    font-size: t.$fschoice;
                     font-weight: 100;
                 }
 
@@ -120,7 +120,7 @@
                     background: colors.$light-green;
                 }
                 & h2 {
-                    font-size: 16px;
+                    font-size: t.$fschoice;
                     font-weight: 300;
                 }
             }
@@ -159,36 +159,49 @@
                 width: 100%;
                 // overflow:hidden ;
                 min-width: 60%;
-                display: flex;flex-direction: column;
+                
+                flex-direction: column;
                 justify-content: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 &__menu{
-                    display: block;
-                    width: 100%;
-                    white-space: nowrap;
+                    // display: block;
+                    // width: 100%;
+                    
 
                     // permet les trois points quand hidden
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
+                    // white-space: nowrap;
+                    // overflow: hidden;
+                    // text-overflow: ellipsis;
+                   
                     &-title{
-                        font-size: 18px;
+                        
+                        font-size: t.$fsh3restau;
                         font-weight: 500;
                         margin-bottom: 0.4rem;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                     &-desc{
                         
-                        font-size: 15px;
+                        font-size: t.$fsprestau;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
-                
         }
         
         &__prix{
-            height: 32px;
-            width: 45px;
+            background: white;
+            display: block;
+            height: 15px;
+            width: 60px;
             padding-left: 0px;
-            margin: 36px 3px 0rem 10px;
-            font-size: 1.5rem;
+            margin: 36px 3px 0rem 15px;
+            font-size: t.$fsprestau;
             font-weight: 600;
             text-align: center;
             transition: all 0.4s linear;
@@ -213,7 +226,7 @@
             position: absolute;
             left: 20px;
             margin: 24px 0 24px 0;
-            font-size: 1.5rem;
+            font-size: t.$fsh3;
             color: colors.$white;
           }
         }

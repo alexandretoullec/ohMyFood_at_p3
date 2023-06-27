@@ -25,17 +25,14 @@
   .main__fonctionnement{
     @include mixin.flex-center();
     align-items: flex-start;
-    // justify-content: flex-start;
     padding: 4rem 2rem;
-    
     width:100%;
     @media screen and (min-width:typo_and_var.$ssl) {
-      // width: 100%;
       padding: 3rem 20rem 0 20rem ;
       height: auto;
     }
   
-    & h1{
+    & h2{
       @include mixin.h1style();
       margin-bottom:2rem;
       padding: 0;
@@ -51,16 +48,13 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      
       width: 100%;
-  
       @media screen and (min-width:typo_and_var.$ssl) {
         justify-content: flex-start;
         height: 15rem;
         flex-direction: row;
         width: 100%;
         margin: 0;
-        
       }
   
       &-card{
@@ -75,7 +69,6 @@
           margin-left: 1rem;
           justify-content: flex-start;
         }
-
         & p{        
           position: absolute;
           display: flex;
@@ -88,24 +81,22 @@
           width: 2.8rem;
           height: 2.8rem;
         }
-      & i{
-        font-size: 2.5rem;
-        color: colors.$dark-grey;
-        margin-left: 2rem;
-        margin-right: 0rem;
-        @media screen and (min-width:typo_and_var.$ssl) {
-          margin-left: 4rem;
-          margin-right: 3rem;
+        & i{
+          font-size: 2.5rem;
+          color: colors.$dark-grey;
+          margin-left: 2rem;
+          margin-right: 0rem;
+          @media screen and (min-width:typo_and_var.$ssl) {
+            margin-left: 4rem;
+            margin-right: 3rem;
+           }
         }
-      }
-  
       & .fa-store {
         color: colors.$purple;
       }
-  
       & h3 {
         width: 80%;
-        font-size: 16px;
+        font-size: typo_and_var.$fschoice;
       }
       }
     }
@@ -114,54 +105,32 @@
     // ****************** Restaurants ******************
   
     .main__restaurants{
-      
       background: colors.$light-grey;
       width: 100%;
-      
-      
       @media screen and (min-width:typo_and_var.$ssl) {
-        // max-width: 70%;
         padding: 5rem 20rem;
-        
-  
       } 
-  
-      & h1{
+      & h2{
         @include mixin.h1style();
         width: 90%;
         margin: 5rem 0 2rem 2rem;
-        // margin-left: 2.5rem;
-        // margin-bottom: 2.5rem;
         @media screen and (min-width:typo_and_var.$ssl) {
-          
           margin-left: 0;
         } 
       }
-  
       &__cards{
         @include mixin.flex-center();
-        
-        
-  
+          
         @media screen and (min-width:typo_and_var.$ssl) {
           flex-wrap: wrap;
           flex-direction: row;
-          // max-width: 70%;
-          // margin: 0;
           justify-content: space-between;
-          // padding: 0 25rem;
         }
-        // & a{
-        //   text-decoration: none;
-        //   color: colors.$black;
-        // } 
   
         &-card{
           cursor: pointer;
           flex-direction: column;
           width: 90%;
-          
-          // max-width: 40rem;
           margin-bottom: 2.5rem;
           @media screen and (min-width:typo_and_var.$ssl) {
             width: 45%;
@@ -177,17 +146,14 @@
             background: colors.$light-green;
             color: colors.$green;
             font-weight: 500;
-            font-size: 14px;
+            font-size: typo_and_var.$fsnew;
             line-height: 16px;
-  
-           
           }
           
           & a {
             text-decoration: none;
-            color: black;
-            // height: 20rem;
-              width: 100%;
+            color: colors.$black;
+            width: 100%;
             & img{
               height: 20rem;
               width: 100%;
@@ -209,20 +175,14 @@
               width: 80%;
             }
             &-text{
-
-              & h2{
+              & h3{
                 font-weight: 700;
-                font-size: 18px;
+                font-size: typo_and_var.$fsh3;
                 line-height: 21px;
-                
               }
             }
-  
             & i {
               font-size: 2.5rem;
-              // &:active{
-              //   color: colors.$linear-gradient;
-              // }
             }
           }
         }
