@@ -76,7 +76,8 @@
           margin-left: 1rem;
           justify-content: flex-start;
         }
-        & p{        
+        & span{        
+          font-size: typo_and_var.$fsnew;
           position: absolute;
           display: flex;
           align-items: center;
@@ -101,9 +102,10 @@
       & .fa-store {
         color: colors.$purple;
       }
-      & h3 {
+      & p {
         width: 80%;
-        font-size: typo_and_var.$fschoice;
+        font-size: typo_and_var.$fsp;
+        font-weight: 500;
       }
       }
     }

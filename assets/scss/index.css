@@ -25,6 +25,7 @@ img {
 }
 
 .main-container {
+  max-width: 2000px;
   margin: auto;
 }
 
@@ -694,7 +695,8 @@ img {
     justify-content: flex-start;
   }
 }
-.main__fonctionnement__cards-card p {
+.main__fonctionnement__cards-card span {
+  font-size: 14px;
   position: absolute;
   display: flex;
   align-items: center;
@@ -721,9 +723,10 @@ img {
 .main__fonctionnement__cards-card .fa-store {
   color: #9356DC;
 }
-.main__fonctionnement__cards-card h3 {
+.main__fonctionnement__cards-card p {
   width: 80%;
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .main__restaurants {
