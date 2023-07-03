@@ -824,6 +824,11 @@ img {
   font-size: 24px;
   line-height: 21px;
 }
+.main__restaurants__cards-card-description-text p {
+  padding-top: 0.5rem;
+  font-size: 17px;
+  font-weight: 300;
+}
 .main__restaurants__cards-card-description i {
   font-size: 2.5rem;
 }

@@ -189,6 +189,11 @@
                 font-size: typo_and_var.$fsh3;
                 line-height: 21px;
               }
+              & p{
+                padding-top: 0.5rem;
+                font-size: typo_and_var.$fsp;
+                font-weight: 300;
+              }
             }
             & i {
               font-size: 2.5rem;
