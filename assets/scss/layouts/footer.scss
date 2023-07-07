@@ -1,79 +1,78 @@
-@use '../utils/mixin.scss';
-@use '../components/general';
-@use '../utils/colors.scss';
-@use '../components/components';
-@use '../utils/typo_and_var.scss';
-
+@use "../utils/mixin.scss";
+@use "../components/general";
+@use "../utils/colors.scss";
+@use "../components/components";
+@use "../utils/typo_and_var.scss";
 
 //************* footer **************
 
-.footer{
-    background: #353535;
-    height: 20rem;
-    padding: 2rem;
-    @media screen and (min-width:typo_and_var.$ssl) {
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      justify-content: flex-start;
-      height: 10rem;
-      padding-top: 5rem;
-    } 
-    &__logo{
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      width: 100%;
-      text-align: left;
-      @media screen and (min-width:typo_and_var.$ssl) {
-        width: 15%;
-        margin-left: 2rem;
-      } 
-      & img{
-        filter: invert(1) ;
-        width: 11rem;
-      }
+.footer {
+  background: #353535;
+  height: 20rem;
+  padding: 2rem;
+  @media screen and (min-width: typo_and_var.$ssl) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    height: 10rem;
+    padding-top: 5rem;
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    text-align: left;
+    @media screen and (min-width: typo_and_var.$ssl) {
+      width: 15%;
+      margin-left: 2rem;
     }
-    &__links{
+    & img {
+      filter: invert(1);
+      width: 11rem;
+    }
+  }
+  &__links {
+    @include mixin.flex-center();
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2.5rem 0;
+    @media screen and (min-width: typo_and_var.$ssl) {
+      display: flex;
+      flex-direction: row;
+      width: auto;
+    }
+    &-link {
       @include mixin.flex-center();
-      align-items: flex-start;
-      justify-content: space-between;
+      flex-direction: row;
+      color: colors.$white;
+      text-decoration: none;
+      font-size: 1.5rem;
       width: 100%;
-      padding: 2.5rem 0;
-      @media screen and (min-width:typo_and_var.$ssl) {
+      justify-content: flex-start;
+      margin-bottom: 1rem;
+      @media screen and (min-width: typo_and_var.$ssl) {
+        display: flex;
+        width: auto;
+        margin-bottom: 0;
+      }
+      & i {
+        margin-right: 0.5rem;
+      }
+      & a {
         display: flex;
         flex-direction: row;
-        width: auto;
-      } 
-      &-link{
-        @include mixin.flex-center();
-        flex-direction: row;
-        color: colors.$white;
+        display: inline;
         text-decoration: none;
-        font-size: 1.5rem;
-        width: 100%;
-        justify-content: flex-start;
-        margin-bottom: 1rem;
-        @media screen and (min-width:typo_and_var.$ssl) {
-          display: flex;
-          width: auto;
-          margin-bottom: 0;
-        } 
-        & i {
-          margin-right: 0.5rem;
-        }
-        & a{
-          display: flex;
-          flex-direction: row;
-          display: inline;
-          text-decoration: none;
-          color: colors.$white;
-          @media screen and (min-width:typo_and_var.$ssl) {
-            margin-left: 1rem;
-            margin-right: 1rem;
-            white-space: nowrap;
-          } 
+        color: colors.$white;
+        @media screen and (min-width: typo_and_var.$ssl) {
+          margin-left: 1rem;
+          margin-right: 1rem;
+          white-space: nowrap;
         }
       }
     }
   }
+}

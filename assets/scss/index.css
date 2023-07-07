@@ -30,14 +30,14 @@ img {
 }
 
 .button {
-  color: #F3F3F3;
+  color: #f3f3f3;
   border: none;
   cursor: pointer;
   font-weight: 500;
   font-size: 1.6rem;
   height: 5rem;
   padding: 1.5rem 4rem;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   -webkit-transition-duration: 0.5s; /* Safari */
@@ -70,7 +70,7 @@ img {
   font-size: 2.5rem;
 }
 .heart-checkbox .checked {
-  color: #9356DC;
+  color: #9356dc;
   display: none;
 }
 .heart-checkbox input[type=checkbox] {
@@ -113,7 +113,7 @@ img {
   justify-content: center;
   flex-direction: column;
   flex-direction: row;
-  background: #EAEAEA;
+  background: #eaeaea;
   height: 6rem;
 }
 .header__location i {
@@ -140,7 +140,7 @@ img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: #F7F7F7;
+  background: #f7f7f7;
   justify-content: space-around;
   padding-top: 5rem;
   padding-bottom: 8rem;
@@ -242,7 +242,7 @@ img {
   justify-content: center;
   flex-direction: column;
   flex-direction: row;
-  color: #F3F3F3;
+  color: #f3f3f3;
   text-decoration: none;
   font-size: 1.5rem;
   width: 100%;
@@ -264,7 +264,7 @@ img {
   flex-direction: row;
   display: inline;
   text-decoration: none;
-  color: #F3F3F3;
+  color: #f3f3f3;
 }
 @media screen and (min-width: 1040px) {
   .footer__links-link a {
@@ -315,7 +315,7 @@ img {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  background: #F3F3F3;
+  background: #f3f3f3;
   animation: loader 2.8s linear forwards;
 }
 .container__loader {
@@ -342,7 +342,7 @@ img {
   bottom: 10px;
   left: 10px;
   right: 10px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   filter: blur(10px);
 }
 .container__loader__icon {
@@ -440,7 +440,7 @@ img {
   height: 100%;
   border-radius: 20px;
   position: relative;
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 @media screen and (min-width: 1040px) {
   .menus__main {
@@ -496,7 +496,7 @@ img {
   content: "";
   height: 3px;
   width: 40px;
-  background: #99E2D0;
+  background: #99e2d0;
 }
 .menus__main__container-sub-subtitle h2 {
   font-size: 16px;
@@ -576,7 +576,7 @@ img {
   left: 20px;
   margin: 24px 0 24px 0;
   font-size: 24px;
-  color: #F3F3F3;
+  color: #f3f3f3;
 }
 .menus__main .selection {
   display: none;
@@ -587,7 +587,7 @@ img {
 }
 .menus__main .selection:checked + .assiette .assiette--valide {
   min-width: 60px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   transition: all 0.4s linear;
 }
 .menus__main-button {
@@ -680,7 +680,7 @@ img {
   }
 }
 .main__fonctionnement__cards-card {
-  background: #F7F7F7;
+  background: #f7f7f7;
   width: 95%;
   height: 8rem;
   margin-left: -1.5rem;
@@ -702,15 +702,15 @@ img {
   align-items: center;
   justify-content: center;
   left: -10px;
-  background: #9356DC;
-  color: #F3F3F3;
+  background: #9356dc;
+  color: #f3f3f3;
   border-radius: 50%;
   width: 2.8rem;
   height: 2.8rem;
 }
 .main__fonctionnement__cards-card i {
   font-size: 2.5rem;
-  color: #7E7E7E;
+  color: #7e7e7e;
   margin-left: 3rem;
   margin-right: 2rem;
 }
@@ -721,7 +721,7 @@ img {
   }
 }
 .main__fonctionnement__cards-card .fa-store {
-  color: #9356DC;
+  color: #9356dc;
 }
 .main__fonctionnement__cards-card p {
   width: 80%;
@@ -730,7 +730,7 @@ img {
 }
 
 .main__restaurants {
-  background: #F7F7F7;
+  background: #f7f7f7;
   width: 100%;
 }
 @media screen and (min-width: 1040px) {
@@ -784,7 +784,7 @@ img {
   right: 10px;
   width: 80px;
   height: 29px;
-  background: #99E2D0;
+  background: #99e2d0;
   color: #008766;
   font-weight: 500;
   font-size: 14px;

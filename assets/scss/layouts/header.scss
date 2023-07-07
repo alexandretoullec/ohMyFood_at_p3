@@ -1,90 +1,89 @@
-@use '../utils/mixin.scss';
-@use '../components/general';
-@use '../utils/colors.scss';
-@use '../components/components';
-@use '../utils/typo_and_var.scss';
-
+@use "../utils/mixin.scss";
+@use "../components/general";
+@use "../utils/colors.scss";
+@use "../components/components";
+@use "../utils/typo_and_var.scss";
 
 //*************************Header *********************
 
-.header__logo{
-    @include mixin.flex-center();
-    height:8rem;
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.15);
-    margin-bottom: 3px;
-    @media screen and (min-width:typo_and_var.$ssl) {
-      margin: 2rem 0;
-      box-shadow: none;
-    }
-    & img{
-      height: 3rem;
-      @media screen and (min-width:typo_and_var.$ssl) {
-        height: 5rem;
-      }
+.header__logo {
+  @include mixin.flex-center();
+  height: 8rem;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 3px;
+  @media screen and (min-width: typo_and_var.$ssl) {
+    margin: 2rem 0;
+    box-shadow: none;
+  }
+  & img {
+    height: 3rem;
+    @media screen and (min-width: typo_and_var.$ssl) {
+      height: 5rem;
     }
   }
-  
-  .header__location{
-    @include mixin.flex-center();
-    flex-direction: row;
-    background: colors.$grey;
-    height: 6rem;
-    & i{
-      font-size: 2rem;
-    }
-    & input{
-      background: transparent;
-      border: none;
-      font-weight: 500;
+}
+
+.header__location {
+  @include mixin.flex-center();
+  flex-direction: row;
+  background: colors.$grey;
+  height: 6rem;
+  & i {
+    font-size: 2rem;
+  }
+  & input {
+    background: transparent;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    width: 15rem;
+    &::placeholder {
+      color: black;
+      font-weight: 600;
       font-size: 16px;
       line-height: 19px;
-      width: 15rem;
-      &::placeholder{
-        color: black;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-        text-align: center;
-      }
-    }
-  }
-  
-  .header__explanation{
-    @include mixin.flex-center();
-    background: colors.$light-grey;
-    justify-content: space-around;
-    padding-top: 5rem;
-    padding-bottom: 8rem;
-    &-text{
-      @include mixin.flex-center();
       text-align: center;
-      & h1{
-        @include mixin.h1style();
-        font-size: typo_and_var.$fsh2Fonc;
-        width: 80%;
-        line-height: 30px;
-        margin-bottom: 2rem;
-        @media screen and (min-width:typo_and_var.$ssl) {
-          font-size: 5rem;
-          width: 100%;
-          margin-bottom: 5rem;
-        }
-      }
-      & p{
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 21px;
-        width: 80%;
+    }
+  }
+}
+
+.header__explanation {
+  @include mixin.flex-center();
+  background: colors.$light-grey;
+  justify-content: space-around;
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+  &-text {
+    @include mixin.flex-center();
+    text-align: center;
+    & h1 {
+      @include mixin.h1style();
+      font-size: typo_and_var.$fsh2Fonc;
+      width: 80%;
+      line-height: 30px;
+      margin-bottom: 2rem;
+      @media screen and (min-width: typo_and_var.$ssl) {
+        font-size: 5rem;
+        width: 100%;
         margin-bottom: 5rem;
-        @media screen and (min-width:typo_and_var.$ssl) {
-          font-size: 2.5rem;;
-          margin-bottom: 5rem;
-        }
       }
     }
-    &-button a{
-      text-decoration: none;
+    & p {
+      font-weight: 300;
       font-size: 18px;
-      font-weight: 500;
+      line-height: 21px;
+      width: 80%;
+      margin-bottom: 5rem;
+      @media screen and (min-width: typo_and_var.$ssl) {
+        font-size: 2.5rem;
+        margin-bottom: 5rem;
       }
+    }
   }
+  &-button a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}

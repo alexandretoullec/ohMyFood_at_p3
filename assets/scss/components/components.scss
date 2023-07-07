@@ -1,80 +1,63 @@
-@use '../utils/mixin.scss';
-@use '../utils/colors.scss';
-@use '../utils/typo_and_var.scss';
-
+@use "../utils/mixin.scss";
+@use "../utils/colors.scss";
+@use "../utils/typo_and_var.scss";
 
 // ***************** components ********************
 
-.button{
-    color: colors.$white;
-    border: none;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 1.6rem;
-    height: 5rem;
-    padding: 1.5rem 4rem;
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    -webkit-transition-duration: 0.5s; /* Safari */
-    transition-duration: 0.5s;
-  }
+.button {
+  color: colors.$white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.6rem;
+  height: 5rem;
+  padding: 1.5rem 4rem;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  -webkit-transition-duration: 0.5s; /* Safari */
+  transition-duration: 0.5s;
+}
 
-  .button:hover{
-    filter: brightness(120%);
+.button:hover {
+  filter: brightness(120%);
+}
 
-  }
-  
-  .card{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    
-    box-shadow: typo_and_var.$bs;
-    border-radius: 15px;
-    
-  }
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: typo_and_var.$bs;
+  border-radius: 15px;
+}
 
 // ****************** heart-checkbox *************************
 
 .heart-checkbox input[type="checkbox"],
 .heart-checkbox .checked {
-    display: none;
+  display: none;
 }
 
 .heart-checkbox {
   cursor: pointer;
 
-  & i{
+  & i {
     margin: 2rem 0;
     font-size: 2.5rem;
-    
   }
-  & .checked{
+  & .checked {
     color: colors.$purple;
     display: none;
   }
 
-  & input[type="checkbox"]{
+  & input[type="checkbox"] {
     display: none;
-    &:checked ~ .checked{
+    &:checked ~ .checked {
       display: inline-block;
     }
-    &:checked ~ .unchecked{
+    &:checked ~ .unchecked {
       display: none;
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-

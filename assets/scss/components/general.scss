@@ -1,8 +1,8 @@
-@use '../utils/typo_and_var.scss';
+@use "../utils/typo_and_var.scss";
 
 // **************** general ************
-  
-  * {
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,14 +26,7 @@ img {
   width: 100%;
 }
 
-// .container {
-//   max-width: 900px;
-//   margin: 0 auto;
-//   padding: 0 20px;
-// }
-
-.main-container{
+.main-container {
   max-width: 2000px;
   margin: auto;
 }
-
