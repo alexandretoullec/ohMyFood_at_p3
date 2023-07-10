@@ -35,30 +35,130 @@
 
 // ****************** heart-checkbox *************************
 
-.heart-checkbox input[type="checkbox"],
-.heart-checkbox .checked {
-  display: none;
+// .heart-checkbox input[type="checkbox"],
+// .heart-checkbox .checked {
+//   display: none;
+// }
+
+// .heart-checkbox {
+//   cursor: pointer;
+
+//   & i {
+//     width: 100%;
+//     margin: 2.1rem 0;
+//     font-size: 2.5rem;
+//   }
+//   & .checked {
+//     background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+
+//     background: -webkit-linear-gradient(
+//       193.33deg,
+//       #9356dc -11.44%,
+//       #ff79da 123.93%
+//     );
+//     background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+//     -webkit-background-clip: text;
+//     -moz-background-clip: text;
+//     background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//     transition: all 0.5s ease-in 0.3s;
+//   }
+
+//   & input[type="checkbox"] {
+//     display: none;
+//     &:checked ~ .checked {
+//       display: inline-block;
+//     }
+//     &:checked ~ .unchecked {
+//       display: none;
+//     }
+//   }
+// }
+
+// ******************** coeur
+
+@keyframes show {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-.heart-checkbox {
-  cursor: pointer;
+@keyframes erase {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
-  & i {
-    margin: 2rem 0;
+.selection {
+  display: none;
+  &:checked + .heart .heart--vide {
+    animation: erase 0.5s linear forwards;
+  }
+  &:checked + .heart .heart__filter--plein {
+    opacity: 1;
+  }
+  &:checked + .heart .heart__filter--plein {
+    z-index: 1;
+    opacity: 1;
+    animation: show 1.8s linear forwards;
+  }
+}
+
+%tap-coeur {
+  height: 48px;
+  width: 48px;
+}
+
+.heart {
+  @extend %tap-coeur;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  @media screen and (min-width: typo_and_var.$sst) {
+    position: relative;
+    right: 0rem;
+    bottom: 0px;
+  }
+  &:hover {
+    cursor: pointer;
+  } /* coeur vide */
+  &--vide {
+    padding: 13px 12.5px 12px 12.8px;
     font-size: 2.5rem;
   }
-  & .checked {
-    color: colors.$purple;
-    display: none;
-  }
+  /* zone apparition du coeur plein */
+  &__filter {
+    @extend %tap-coeur;
+    position: absolute;
+    top: 0px;
 
-  & input[type="checkbox"] {
-    display: none;
-    &:checked ~ .checked {
-      display: inline-block;
+    /* coeur plein */
+    @media screen and (min-width: typo_and_var.$sst) {
+      position: absolute;
+      right: 0rpx;
+      top: 0px;
     }
-    &:checked ~ .unchecked {
-      display: none;
+
+    &--plein {
+      position: absolute;
+      padding: 12px 11px 12px 13px;
+
+      font-size: 2.5rem;
+      color: transparent;
+      opacity: 0;
+      transform-origin: 50% 50%;
+      transform: scale(0);
+      background: linear-gradient(200deg, #9356dc 35%, #ff79da 65%);
+      -webkit-background-clip: text;
     }
   }
 }

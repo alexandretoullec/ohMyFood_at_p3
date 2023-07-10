@@ -33,10 +33,25 @@
         <div class="menus__main-title">
           <h1>À la française</h1>
 
-          <label class="heart-checkbox">
+          <!-- <label class="heart-checkbox">
             <input type="checkbox" />
             <i class="fa-regular fa-heart unchecked"></i>
             <i class="fa-solid fa-heart checked"></i>
+          </label> -->
+
+          <!-- selection j'aime -->
+          <input
+            class="selection"
+            type="checkbox"
+            name="aime"
+            id="la_palette_du_gout"
+          />
+
+          <label for="la_palette_du_gout" class="heart">
+            <i class="fa-regular fa-heart heart--vide"></i>
+            <span class="heart__filter"
+              ><i class="fa-solid fa-heart heart__filter--plein"></i
+            ></span>
           </label>
         </div>
 

@@ -29,6 +29,7 @@ img {
   margin: auto;
 }
 
+/* coeur*/
 .button {
   color: #f3f3f3;
   border: none;
@@ -58,30 +59,88 @@ img {
   border-radius: 15px;
 }
 
-.heart-checkbox input[type=checkbox],
-.heart-checkbox .checked {
+@keyframes show {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes erase {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.selection {
   display: none;
+}
+.selection:checked + .heart .heart--vide {
+  animation: erase 0.5s linear forwards;
+}
+.selection:checked + .heart .heart__filter--plein {
+  opacity: 1;
+}
+.selection:checked + .heart .heart__filter--plein {
+  z-index: 1;
+  opacity: 1;
+  animation: show 1.8s linear forwards;
 }
 
-.heart-checkbox {
+.heart__filter, .heart {
+  height: 48px;
+  width: 48px;
+}
+
+.heart {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  /* coeur vide */
+  /* zone apparition du coeur plein */
+}
+@media screen and (min-width: 768px) {
+  .heart {
+    position: relative;
+    right: 0rem;
+    bottom: 0px;
+  }
+}
+.heart:hover {
   cursor: pointer;
 }
-.heart-checkbox i {
-  margin: 2rem 0;
+.heart--vide {
+  padding: 13px 12.5px 12px 12.8px;
   font-size: 2.5rem;
 }
-.heart-checkbox .checked {
-  color: #9356dc;
-  display: none;
+.heart__filter {
+  position: absolute;
+  top: 0px;
+  /* coeur plein */
 }
-.heart-checkbox input[type=checkbox] {
-  display: none;
+@media screen and (min-width: 768px) {
+  .heart__filter {
+    position: absolute;
+    right: 0rpx;
+    top: 0px;
+  }
 }
-.heart-checkbox input[type=checkbox]:checked ~ .checked {
-  display: inline-block;
-}
-.heart-checkbox input[type=checkbox]:checked ~ .unchecked {
-  display: none;
+.heart__filter--plein {
+  position: absolute;
+  padding: 12px 11px 12px 13px;
+  font-size: 2.5rem;
+  color: transparent;
+  opacity: 0;
+  transform-origin: 50% 50%;
+  transform: scale(0);
+  background: linear-gradient(200deg, #9356dc 35%, #ff79da 65%);
+  -webkit-background-clip: text;
 }
 
 .header__logo {
@@ -454,6 +513,7 @@ img {
 }
 .menus__main-title {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
@@ -815,7 +875,6 @@ img {
   flex-direction: row;
   width: 100%;
   height: 8rem;
-  align-items: center;
 }
 .main__restaurants__cards-card-description a {
   width: 80%;
@@ -830,8 +889,21 @@ img {
   font-size: 17px;
   font-weight: 300;
 }
-.main__restaurants__cards-card-description i {
-  font-size: 2.5rem;
+.main__restaurants__cards-card-description-icon .heart {
+  right: 10px;
+  top: 22rem;
+}
+@media screen and (min-width: 768px) {
+  .main__restaurants__cards-card-description-icon .heart {
+    right: 0px;
+    top: 0px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main__restaurants__cards-card-description-icon .heart__filter {
+    right: 0px;
+    top: -23px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
