@@ -46,6 +46,7 @@ img {
 
 .button:hover {
   filter: brightness(120%);
+  box-shadow: 10px 14px 20px rgba(0, 0, 0, 0.55);
 }
 
 .card {
