@@ -1,6 +1,7 @@
 @use "../utils/mixin.scss";
 @use "../utils/colors.scss";
 @use "../utils/typo_and_var.scss";
+@use "../utils/animation.scss";
 
 // ***************** components ********************
 
@@ -35,73 +36,10 @@
 
 // ****************** heart-checkbox *************************
 
-// .heart-checkbox input[type="checkbox"],
-// .heart-checkbox .checked {
-//   display: none;
-// }
-
-// .heart-checkbox {
-//   cursor: pointer;
-
-//   & i {
-//     width: 100%;
-//     margin: 2.1rem 0;
-//     font-size: 2.5rem;
-//   }
-//   & .checked {
-//     background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-
-//     background: -webkit-linear-gradient(
-//       193.33deg,
-//       #9356dc -11.44%,
-//       #ff79da 123.93%
-//     );
-//     background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-//     -webkit-background-clip: text;
-//     -moz-background-clip: text;
-//     background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//     transition: all 0.5s ease-in 0.3s;
-//   }
-
-//   & input[type="checkbox"] {
-//     display: none;
-//     &:checked ~ .checked {
-//       display: inline-block;
-//     }
-//     &:checked ~ .unchecked {
-//       display: none;
-//     }
-//   }
-// }
-
-// ******************** coeur
-
-@keyframes show {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes erase {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .selection {
   display: none;
   &:checked + .heart .heart--vide {
-    animation: erase 0.5s linear forwards;
+    animation: erase 0.8s linear forwards;
   }
   &:checked + .heart .heart__filter--plein {
     opacity: 1;
@@ -109,7 +47,7 @@
   &:checked + .heart .heart__filter--plein {
     z-index: 1;
     opacity: 1;
-    animation: show 1.8s linear forwards;
+    animation: show 1s linear forwards;
   }
 }
 

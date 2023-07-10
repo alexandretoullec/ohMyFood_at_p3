@@ -3,6 +3,7 @@
 @use "../components/components";
 @use "../utils/typo_and_var.scss" as t;
 @use "../utils/mixin.scss";
+@use "../utils/animation.scss";
 
 // ******************* header ********************
 .menus__header {
@@ -37,6 +38,31 @@
 }
 
 // ******************* main ********************
+
+@keyframes apparait {
+  99.99% {
+    height: 0%;
+    width: 0%;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+//specifi class for animation
+
+.entrées {
+  animation: 1s show;
+}
+
+.plats {
+  animation: 2s show;
+}
+
+.dessert {
+  animation: 3s show;
+}
 
 .menus__main {
   display: flex;
